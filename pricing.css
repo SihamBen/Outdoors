@@ -1,0 +1,113 @@
+
+.pricing-grid{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  padding: 20px;
+}
+.card {
+  
+  cursor: pointer;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  flex-shrink: 0;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+}
+.card h3 {
+  background-color: #d7d4ed ;
+  height: 40px;
+  width: 100%;
+  padding-top: 10px;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+h1 {
+  padding: 10px;
+}
+.lines {
+  margin-top:20px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  background-color: rgba(218, 214, 214, 0.534);
+  height: 5px;
+  border-radius: 2px;
+  margin: 5px;
+}
+.plans {
+  display: flex;
+  flex-direction: column;
+  flex-basis:200px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+.plan {
+  margin: 5px 0;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.progress {
+  width: 400px;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(218, 214, 214, 0.534);
+  position: relative;
+}
+.progress::before {
+  content: "";
+  position: absolute;
+  background-color: #eb648c;
+  height: 100%;
+  width: 0;
+  transition: all 0.3s ease;
+  border-radius: 5px ;
+}
+
+.card:hover {
+  transform: scale(1.09);
+}
+.card:hover h3{
+background:#eb648c ;
+}
+.basic:hover ~ .plans .users .progress::before {
+  width: 33%;
+}
+.basic:hover ~ .plans .gb .progress::before {
+  width: 25%;
+}
+.basic:hover ~ .plans .projects .progress::before {
+  width: 30%;
+}
+.pro:hover ~ .plans .users .progress::before {
+  width: 66%;
+}
+.pro:hover ~ .plans .gb .progress::before {
+  width: 50%;
+}
+.pro:hover ~ .plans .projects .progress::before {
+  width: 66%;
+}
+.premium:hover ~ .plans .users .progress::before {
+  width: 100%;
+}
+.premium:hover ~ .plans .gb .progress::before {
+  width: 100%;
+}
+.premium:hover ~ .plans .projects .progress::before {
+  width: 100%;
+}
