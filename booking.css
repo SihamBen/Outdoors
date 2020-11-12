@@ -1,0 +1,26 @@
+.booking{
+    display: flex;
+    justify-content: center;
+}
+.booking-form>input,label{
+display: block;
+margin: 1rem 0;
+font-size: 1.3rem;}
+
+.booking-form>input[type=checkbox],label[for=camping],label[for=hiking],label[for=stargazing]{
+    display: inline;
+margin: 0 0.5rem;
+}
+
+.booking-form>label{
+    font-family: "Aldrich", sans-serif;
+}
+.booking-form>input{
+    height: 3rem;
+    width: 25rem;
+}
+.booking-form>input[type=checkbox]{
+    height: 2rem;
+    width: 2rem;
+
+}

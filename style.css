@@ -400,3 +400,28 @@ header{
     }
     
 }
+
+.about p{
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+  
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.contact img{
+  width: 22rem;
+  height: 35rem;
+  object-fit: cover;
+  
+}
+.social-media i{
+  font-size: 3rem;
+  margin: 0 20px ;
+}
+.social-media a{
+  font-size: 2rem;
+ 
+}

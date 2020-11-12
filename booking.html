@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="booking.css" />
     <link
       href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
       rel="stylesheet"
@@ -56,16 +57,36 @@
     <main>
       <section class="hero">
         <div class="container">
-            <div class="main-title">
-                <h1>Booking</h1>
-              </div>
+          <div class="main-title">
+            <h1>Booking</h1>
+          </div>
         </div>
       </section>
       <section>
-        <div class="container">About us</div>
+        <div class="container booking">
+          <form class="booking-form">
+            <label for="name" >Full Name</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email" >Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="cellphone">Phone Number</label>
+            <input type="tel" id="cellphone" name="cellphone" />
+            <label for="activity">Outdoor activity</label>
+            <input type="checkbox" id="stargazing" /><label for="stargazing">stargazing</label>
+            <input type="checkbox" id="hiking" /><label for="hiking">Hiking</label>
+            <input type="checkbox" id="camping" /><label for="camping">camping</label>
+            <label for="participants">Number of participants</label>
+            <input type="number" id="participants" name="participants" required />
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+            <label for="msg">Message</label>
+            <input type="text" id="msg" name="msg" size="40" height="100"/>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
       </section>
     </main>
-<footer><p>&copy; 2019 Outdoors All rights reserved</p></footer>
+    <footer><p>&copy; 2019 Outdoors All rights reserved</p></footer>
     <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
