@@ -1,6 +1,7 @@
 .booking{
     display: flex;
     justify-content: center;
+   
 }
 .booking-form>input,label{
 display: block;
@@ -19,8 +20,14 @@ margin: 0 0.5rem;
     height: 3rem;
     width: 25rem;
 }
+.booking-form>input:focus{
+outline: 1px solid #eb648c;
+}
 .booking-form>input[type=checkbox]{
     height: 2rem;
     width: 2rem;
 
+}
+.booking-form>button{
+    border: none;
 }

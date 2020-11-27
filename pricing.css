@@ -111,3 +111,20 @@ background:#eb648c ;
 .premium:hover ~ .plans .projects .progress::before {
   width: 100%;
 }
+@media screen and (max-width:900px)
+{.pricing-grid{
+  width: 80%;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+
+}
+.plans{
+  width: 100%;
+}
+.progress{
+  width: 90%;
+}
+
+  
+}

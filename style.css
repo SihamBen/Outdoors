@@ -45,11 +45,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.current-link{
+  color: aquamarine;
 }
 .nav-brand {
   width: 2rem;
 }
+
 .menu-icons i {
   font-size: 3.5rem;
   color: #fefefe;
@@ -88,6 +91,9 @@ nav {
   text-transform: uppercase;
   color: rgb(0, 0, 0, 0.7);
 }
+.active-link{
+border: 6px solid aqua;
+}
 .hero {
   width: 100%;
   height: 80vh;
@@ -116,6 +122,7 @@ nav {
   color: #fafafa;
   text-transform: uppercase;
   transform: translateY(20%);
+  
 }
 .main-message h3 {
   font-size: 1.6rem;
@@ -150,6 +157,12 @@ nav {
   padding: 1rem 2.5rem;
   text-transform: uppercase;
   transition: background-color 650ms;
+  transform-origin: 50% 80%;
+ 
+}
+.btn:first-child{
+  animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+  
 }
 .btn:hover {
   background-color: #ce587b;
@@ -189,6 +202,8 @@ nav {
   justify-content: center;
   z-index: 1;
   cursor: pointer;
+ 
+
 }
 .activities-grid-item:before {
   content: "";
@@ -203,18 +218,22 @@ nav {
     rgba(72, 56, 146, 0.8) 100%
   );
   z-index: -1;
+  animation: appear 1s  cubic-bezier(.48,.13,.54,.91) 1;
 }
 .star-gazing {
   background: url(images/stars.jpg) center no-repeat;
   background-size: cover;
+ 
 }
 .hiking {
   background: url(images/hiking.jpg) center no-repeat;
   background-size: cover;
+ 
 }
 .camping {
   background: url(images/camping.jpg) center no-repeat;
   background-size: cover;
+ 
 }
 .activities-grid-item i {
   font-size: 4em;
@@ -332,7 +351,7 @@ header{
     height: initial;
     background-color: transparent;
     position: initial;
-    right: intial;
+    right: initial;
     top: initial;
     flex-direction: row;
     transition: initial;
@@ -412,8 +431,8 @@ header{
   align-items: center;  
 }
 .contact img{
-  width: 22rem;
-  height: 35rem;
+  width: 200px;
+  height: 50%;
   object-fit: cover;
   
 }
@@ -424,4 +443,61 @@ header{
 .social-media a{
   font-size: 2rem;
  
+}
+@media screen and (max-width:500px)
+{
+  .contact{
+    flex-direction: column;
+    align-content: space-around;
+     
+  }
+  .contact img{
+    width: 60%;
+  }
+  
+}
+/* Animation */
+@keyframes zoomIn {
+  100% {
+      transform: scale(1.16, 1.16);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(1.9, 1, 1) translateX(-10vw);
+   
+  }
+  100% {
+    
+    transition: scale3d(1, 1, 1) translateX(0);
+  }
+  
+ 
+  
+}
+.grid-animation{
+  animation: appear 1.2s 
+  cubic-bezier(1,1,1,1)
+  1;
+}
+@keyframes appearTop {
+  0% {
+    
+    transform:  translateY(-40px);
+   
+  }
+  
+  
+  
+  100% {
+    transition:  translateY(0) ;
+   
+  }
+}
+.text-animation{
+  animation: appearTop .7s 
+  ease-in
+  1;
 }

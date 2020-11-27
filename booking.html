@@ -64,7 +64,7 @@
       </section>
       <section>
         <div class="container booking">
-          <form class="booking-form">
+          <form class="booking-form" method="POST" data-netlify="true" name="booking">
             <label for="name" >Full Name</label>
             <input type="text" id="name" name="name" required />
             <label for="email" >Email</label>
@@ -72,9 +72,9 @@
             <label for="cellphone">Phone Number</label>
             <input type="tel" id="cellphone" name="cellphone" />
             <label for="activity">Outdoor activity</label>
-            <input type="checkbox" id="stargazing" /><label for="stargazing">stargazing</label>
-            <input type="checkbox" id="hiking" /><label for="hiking">Hiking</label>
-            <input type="checkbox" id="camping" /><label for="camping">camping</label>
+            <input type="checkbox" id="stargazing" value="stargazing"/><label for="stargazing">stargazing</label>
+            <input type="checkbox" id="hiking" value="hiking"/><label for="hiking">Hiking</label>
+            <input type="checkbox" id="camping" value="camping"/><label for="camping">camping</label>
             <label for="participants">Number of participants</label>
             <input type="number" id="participants" name="participants" required />
             <label for="date">Date</label>
