@@ -27,7 +27,6 @@ function createObserver() {
   };
   observer = new IntersectionObserver(handleIntersect, options);
   observer.observe(boxElement);
-  console.log(textElements)
   textElements.forEach((textElement)=> observer.observe(textElement))
  
 }
@@ -38,7 +37,7 @@ function handleIntersect(entries, observer) {
       if(entry.target.tagName=="H1")
       {entry.target.classList.add("text-animation");}
      else
-      {entry.target.classList.add("grid-animation");}
+      {entry.target.classList.add("flicker-in-1");}
     } 
 
     
